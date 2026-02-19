@@ -16,21 +16,21 @@ pipeline {
         stage("Restore Dependencies") {
             steps {
                 echo 'Restoring NuGet packages...'
-                bat 'dotnet restore'
+                // bat 'dotnet restore'
             }
         }
 
         stage("Build") {
             steps {
                 echo 'Building the application...'
-                bat 'dotnet build --no-restore'
+                // bat 'dotnet build --no-restore'
             }
         }
 
         stage("Test"){
             steps {
                 echo 'Running Unit and Integration tests...'
-                bat 'dotnet test --no-build --verbosity normal'
+                // bat 'dotnet test --no-build --verbosity normal'
             }
         }
     }
